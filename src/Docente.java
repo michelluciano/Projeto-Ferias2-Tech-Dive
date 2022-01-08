@@ -4,7 +4,8 @@ public class Docente {
 
     private int idDocente;
     private String nomeDocecnte;
-    private ArrayList<Turma> turmaDocente = new ArrayList<>();
+    private ArrayList<Turma> turma = new ArrayList<>();
+
     public static int contadorDocente = 3;
 
     public Docente() {
@@ -13,6 +14,14 @@ public class Docente {
     public Docente(int idDocente, String nomeDocecnte) {
         this.idDocente = idDocente;
         this.nomeDocecnte = nomeDocecnte;
+    }
+
+    public ArrayList<Turma> getTurma() {
+        return turma;
+    }
+
+    public void setTurma(ArrayList<Turma> turma) {
+        this.turma = turma;
     }
 
     public int getIdDocente() {
@@ -31,20 +40,11 @@ public class Docente {
         this.nomeDocecnte = nomeDocecnte;
     }
 
-    public ArrayList<Turma> getTurmaDocente() {
-        return turmaDocente;
-    }
-
-    public void setTurmaDocente(ArrayList<Turma> turmaDocente) {
-        this.turmaDocente = turmaDocente;
-    }
-
     @Override
     public String toString() {
         return "Docente{" +
                 "idDocente=" + idDocente +
                 ", nomeDocecnte='" + nomeDocecnte + '\'' +
-                ", turmaDocente=" + turmaDocente +
                 "}\n";
     }
 }
